@@ -1,36 +1,18 @@
-import os
 from .ui import initialise_cipher
-from .utilities import validate_input, write_pk, load_pk
-from cryptography.exceptions import InvalidSignature
+from .utilities import get_input, encrypt_and_display_info, decrypt_and_display_info
 from cryptography.fernet import Fernet
 
-private_key = Fernet.generate_key()
-fernet = Fernet(private_key)
-private_key = private_key.decode('utf-8')
+key = Fernet.generate_key()
+fernet = Fernet(key)
+key = key.decode('utf-8')
 
 def main():
-    initialise_cipher(private_key)
-    encryptOrDecrypt = validate_input('Do you wanna encrypt or decrypt text(encrypt, decrypt): ', ['encrypt', 'decrypt'])
+    initialise_cipher(key)
+    encryptOrDecrypt = get_input('Do you wanna encrypt or decrypt text(encrypt, decrypt): ', ['encrypt', 'decrypt'])
     if encryptOrDecrypt.lower() == "encrypt":
-        text = input('Enter the text to encrypt: ').encode()
-        encrypted = fernet.encrypt(text)
-        print(f'The encrypted text is: \n{encrypted.decode("utf-8")}')
-        write_pk(private_key)
-        print('The private key was saved, dont change that of any sort...')
+        text = get_input('Enter the text to encrypt: ').encode()
+        encrypt_and_display_info(fernet, key, text)
         
     elif encryptOrDecrypt.lower() == "decrypt":
-        if not os.path.isfile('fernetKey'):
-            raise Exception('A private key was not found, exiting the program...')
-
-        pk = load_pk().encode()
-        text = input('Enter the ciphertext you wanna decrypt: ')
-        decryptor = Fernet(pk)
-        try:
-            decrypted = decryptor.decrypt(text.encode())
-            print(decrypted)
-        except Exception as e:
-            if isinstance(e, InvalidSignature):
-                print('Invalid private key provided')
-            else:
-                print('The ciphertext you provided wasnt encrypted in the AES encryption algorithm')
-                return
+        text = get_input('Enter the text to decrypt: ').encode()
+        decrypt_and_display_info(text)
