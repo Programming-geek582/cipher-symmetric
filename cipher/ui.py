@@ -1,7 +1,7 @@
 from click import secho
 from . import __author__, __copyright__, __description__
 
-def initialise_fernet(private_key):
+def initialise_cipher(private_key):
 	secho(f"""
   ____ _       _
  / ___(_)_ __ | |__   ___ _ __

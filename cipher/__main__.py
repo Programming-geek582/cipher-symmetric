@@ -1,5 +1,5 @@
 import os
-from .ui import initialise_fernet
+from .ui import initialise_cipher
 from .utilities import validate_input, write_pk, load_pk
 from cryptography.exceptions import InvalidSignature
 from cryptography.fernet import Fernet
@@ -9,12 +9,12 @@ fernet = Fernet(private_key)
 private_key = private_key.decode('utf-8')
 
 def main():
-    initialise_fernet(private_key)
+    initialise_cipher(private_key)
     encryptOrDecrypt = validate_input('Do you wanna encrypt or decrypt text(encrypt, decrypt): ', ['encrypt', 'decrypt'])
     if encryptOrDecrypt.lower() == "encrypt":
         text = input('Enter the text to encrypt: ').encode()
         encrypted = fernet.encrypt(text)
-        print(f'The encrypted text is: {encrypted}')
+        print(f'The encrypted text is: \n{encrypted.decode("utf-8")}')
         write_pk(private_key)
         print('The private key was saved, dont change that of any sort...')
         
@@ -27,9 +27,10 @@ def main():
         decryptor = Fernet(pk)
         try:
             decrypted = decryptor.decrypt(text.encode())
+            print(decrypted)
         except Exception as e:
             if isinstance(e, InvalidSignature):
                 print('Invalid private key provided')
             else:
                 print('The ciphertext you provided wasnt encrypted in the AES encryption algorithm')
-        print(decrypted)
+                return
