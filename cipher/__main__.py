@@ -33,5 +33,3 @@ def main():
             else:
                 print('The ciphertext you provided wasnt encrypted in the AES encryption algorithm')
         print(decrypted)
-
-main()

@@ -13,7 +13,7 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url=cipher.__github__,
-    packages=["pg_cipher"],
+    packages=["cipher"],
     entry_points={"console_scripts": ["cipher=cipher.__main__:main"]},
     classifiers=[
         "Programming Language :: Python :: 3",
