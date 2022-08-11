@@ -1,3 +1,0 @@
-[console_scripts]
-cipher = cipher.__main__:main
-

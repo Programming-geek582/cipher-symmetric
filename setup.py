@@ -21,7 +21,9 @@ setup(
         "Operating System :: OS Independent",
         "Programming Language :: Python :: 3.8",
     ],
-    python_requires="<=3.8",
+    python_requires=">=3.8",
     include_package_data=True,
     exclude=("__pycache__",),
+    download_url='https://github.com/Programming-geek582/encipher/archive/refs/tags/0.0.3.tar.gz'
 )
+
