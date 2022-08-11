@@ -1,4 +1,4 @@
-# Encipher
+# Cipher
 
 ## The modern python based encryption and decryption utility
 
