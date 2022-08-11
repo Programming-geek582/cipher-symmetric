@@ -9,11 +9,17 @@ Installation:
 Linux and Mac:
 ```sh
 pip3 install pg-cipher
+
+# via git
+pip3 install git+https://github.com/Programming-geek582/encipher.git
 ```
 
 Windows:
 ```bat
 pip install pg-cipher
+
+# via git
+pip install git+https://github.com/Programming-geek582/encipher.git
 ```
 
 Usage:
@@ -23,7 +29,7 @@ Usage:
 cipher or python -m pg-cipher
 
 # Linux and mac
-python3 -m pg-cipher or cipher
+cipher or python3 -m pg-cipher
 ```
 
 Happy encrypting!
