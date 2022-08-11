@@ -2,7 +2,7 @@
 
 ## The modern python based encryption and decryption utility
 
-encipher is a python CLI utility for encryption and decryption of strings using the cryptography module of python.
+Cipher is a python CLI utility for encryption and decryption of strings using the cryptography module of python.
 
 Installation:
 
