@@ -1,4 +1,4 @@
-# encipher
+# Encipher
 
 ## The modern python based encryption and decryption utility
 
@@ -8,12 +8,12 @@ Installation:
 
 Linux and Mac:
 ```sh
-pip3 install encipher
+pip3 install pg-encipher
 ```
 
 Windows:
 ```bat
-pip install encipher
+pip install pg-encipher
 ```
 
 Usage:
