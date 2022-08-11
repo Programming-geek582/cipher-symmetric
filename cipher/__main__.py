@@ -19,7 +19,7 @@ def main():
         print('The private key was saved, dont change that of any sort...')
         
     elif encryptOrDecrypt.lower() == "decrypt":
-        if not os.path.isfile('key'):
+        if not os.path.isfile('fernetKey'):
             raise Exception('A private key was not found, exiting the program...')
 
         pk = load_pk().encode()
