@@ -8,22 +8,22 @@ Installation:
 
 Linux and Mac:
 ```sh
-pip3 install pg-encipher
+pip3 install pg-cipher
 ```
 
 Windows:
 ```bat
-pip install pg-encipher
+pip install pg-cipher
 ```
 
 Usage:
 
 ```sh
 # Windows
-encipher or python -m encipher
+cipher or python -m pg-cipher
 
 # Linux and mac
-python3 -m encipher or encipher
+python3 -m pg-cipher or cipher
 ```
 
 Happy encrypting!
