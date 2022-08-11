@@ -7,12 +7,12 @@ with open("README.md", "r") as fh:
 
 setup(
     name="pg-encipher",
-    author=fernet.__author__,
-    author_email=fernet.__email__,
-    version=fernet.__version__,
+    author=encipher.__author__,
+    author_email=encipher.__email__,
+    version=encipher.__version__,
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url=fernet.__github__,
+    url=encipher.__github__,
     packages=["pg_encipher"],
     entry_points={"console_scripts": ["encipher=encipher.__main__:main"]},
     classifiers=[
