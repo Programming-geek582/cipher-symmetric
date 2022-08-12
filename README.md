@@ -1,14 +1,14 @@
-# Cipher
+# Cipher-symmetric
 
 ## The modern python based encryption and decryption utility
 
-Cipher is a python CLI utility for encryption and decryption of strings using the cryptography module of python.
+Cipher is a python CLI utility for encryption and decryption of strings using the cryptography module of python(symmetric encryption).
 
 Installation:
 
 Linux and Mac:
 ```sh
-pip3 install pg-cipher
+pip3 install cipher-symmetric
 
 # via git
 pip3 install git+https://github.com/Programming-geek582/encipher.git
@@ -16,7 +16,7 @@ pip3 install git+https://github.com/Programming-geek582/encipher.git
 
 Windows:
 ```bat
-pip install pg-cipher
+pip install cipher-symmetric
 
 # via git
 pip install git+https://github.com/Programming-geek582/encipher.git
