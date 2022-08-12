@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name="pg-cipher",
+    name="cipher-symmetric",
     author=cipher.__author__,
     author_email=cipher.__email__,
     version=cipher.__version__,

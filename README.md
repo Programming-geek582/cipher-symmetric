@@ -26,10 +26,10 @@ Usage:
 
 ```sh
 # Windows
-cipher or python -m pg-cipher
+cipher or python -m cipher
 
 # Linux and mac
-cipher or python3 -m pg-cipher
+cipher or python3 -m cipher
 ```
 
 Happy encrypting!
