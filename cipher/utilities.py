@@ -39,7 +39,7 @@ def decrypt_and_display_info(ciphertext : bytes):
     key = load_key()
     decryptor = Fernet(key)
     try:
-        decrypted = decryptor.decrypt(ciphertext.encode())
+        decrypted = decryptor.decrypt(ciphertext)
         print(f'Decrypted version is: {decrypted.decode("utf-8")}')
     except Exception as e:
         if isinstance(e, InvalidKey):
