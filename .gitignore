@@ -2,3 +2,4 @@ dist/
 env/
 pg_cipher.egg-info/
 cipher/__pycache__
+gitcommands.py

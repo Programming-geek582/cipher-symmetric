@@ -1,4 +1,5 @@
 import os
+import time
 from typing import Optional, List
 from cryptography.exceptions import InvalidSignature, InvalidKey
 from cryptography.fernet import Fernet
@@ -19,7 +20,9 @@ def write_key(key):
 
 def load_key():
     if not os.path.isfile('fernetKey'):
-        raise Exception('A key was not found, exiting the program...')
+        print('A key was not found, exiting the program...')
+        time.sleep(2)
+        exit()
 
     with open('fernetKey', 'r') as f:
         content = f.readlines()

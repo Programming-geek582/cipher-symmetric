@@ -16,5 +16,3 @@ def main():
     elif encryptOrDecrypt.lower() == "decrypt":
         text = get_input('Enter the text to decrypt: ').encode()
         decrypt_and_display_info(text)
-
-main()
