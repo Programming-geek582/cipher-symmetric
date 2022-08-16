@@ -7,7 +7,7 @@ fernet = Fernet(key)
 key = key.decode('utf-8')
 
 def main():
-    initialise_cipher(key)
+    initialise_cipher()
     encryptOrDecrypt = get_input('Do you wanna encrypt or decrypt text(encrypt, decrypt): ', ['encrypt', 'decrypt'])
     if encryptOrDecrypt.lower() == "encrypt":
         text = get_input('Enter the text to encrypt: ').encode()
