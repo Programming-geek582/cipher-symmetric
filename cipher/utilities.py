@@ -51,5 +51,4 @@ def decrypt_and_display_info(ciphertext : bytes):
             return
     
         else:
-            print('The ciphertext provided wasnt encrypted in AES')
-            return
+            raise e
